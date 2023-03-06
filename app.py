@@ -61,7 +61,7 @@ class DummySafetyChecker:
         return images, False
 
 
-# Init is ran on server startup
+# Init is run on server startup
 # Load your model to GPU as a global variable here using the variable name "model"
 def init():
     global model  # needed for bananna optimizations
@@ -117,7 +117,7 @@ def truncateInputs(inputs: dict):
 
 last_xformers_memory_efficient_attention = {}
 
-# Inference is ran for every server call
+# Inference is run for every server call
 # Reference your preloaded global model variable here.
 def inference(all_inputs: dict) -> dict:
     global model

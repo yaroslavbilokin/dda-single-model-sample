@@ -69,11 +69,6 @@ The container expects an `HTTP POST` request with the following JSON body:
 }
 ```
 
-## Examples and testing
-
-There are also very basic examples in [test.py](./test.py), which you can view
-and call `python test.py` if the container is already running on port 8000.
-
 ## Troubleshooting
 
 * **403 Client Error: Forbidden for url**
@@ -84,15 +79,9 @@ and call `python test.py` if the container is already running on port 8000.
 
 ## Adding other Models
 
-You have two options.
-
 1. For a diffusers model, simply set the `MODEL_ID` docker build variable to the name
   of the model hosted on HuggingFace, and it will be downloaded automatically at
   build time.
-
-2. For a non-diffusers model, simply set the `CHECKPOINT_URL` docker build variable
-  to the URL of a `.ckpt` file, which will be downloaded and converted to the diffusers
-  format automatically at build time.
 
 ## Acknowledgements
 
